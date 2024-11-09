@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad Mascotera - El Sujeto</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>Comunidad Mascotera</h2>
+    </header>
+    <main>
+        <div id="publicacion" class="container">
+            <h3>Publicar un animal perdido, encontrado o en adopción</h3>
+            <form onsubmit="event.preventDefault(); alert('Formulario enviado!');">
+                <label for="animal">Nombre de la mascota:</label>
+                <input type="text" id="animal" name="animal" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+                
+                <label for="imagen">Imagen del animal:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png" required>
+                <small>Formatos permitidos: JPG, PNG. Tamaño máximo: 5 MB.</small>
+
+                <label for="estado">Estado de la mascota:</label>
+                <select id="estado" name="estado" required>
+                    <option value="perdido">Perdido</option>
+                    <option value="encontrado">Encontrado</option>
+                    <option value="en_adopcion">En adopción</option>
+                </select>
+
+                <label for="fecha">Fecha de publicación:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <script>
+                    const today = new Date().toISOString().split('T')[0];
+                    document.getElementById('fecha').setAttribute('max', today);
+                </script>
+
+                <input type="submit" value="Publicar">
+            </form>
+        </div>
+
+        <div id="consejos" class="container">
+            <h3>Consejos para cuidar la salud de tu sujeto</h3>
+            <video controls>
+                <source src="../assets/video/Consejos_sobre_salud_de_tu_sujeto.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+    <footer>
+        <a href="../index.html">Volver a El Sujeto</a>
+        <p>&copy; 2024 El Sujeto</p>
+    </footer>
+    <script src="../js/route.js"></script>
+</body>
+</html>
+
