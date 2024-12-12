@@ -480,7 +480,7 @@ body#products .review {
     font-size: 0.9rem;
     color: #888;
     margin-top: 5px;
-    word-wrap: break-word; /* Asegura que las reseñas no se desborden 
+    word-wrap: break-word;  
 }
 
 /* Métodos de pago 
@@ -538,22 +538,56 @@ body#products footer {
     }
 }*/
 
-/* Productos */
+#products-header {
+    background-color: #13445e;
+    padding:  2.5rem 0 5rem 5;  
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center; 
+}
+
+#products-header h1 {
+    font-size: 2.5rem;  
+    word-wrap: break-word;  
+    margin: 0;  
+}
+
+
+@media (max-width: 768px) {
+    #products-header h1 {
+        font-size: 1.5rem;  
+    }
+
+    #products-header {
+        padding: 1.5rem 0;  
+    }
+}
+
+@media (max-width: 576px) {
+    #products-header h1 {
+        font-size: 1.5rem;  
+    }
+}
+
+
+.container {
+    max-width: 100%;  
+    padding-left: 15px;  
+    padding-right: 15px; 
+}
+
+
+#products-header {
+    overflow: hidden;  
+}
+
+
 body#products {
     background-color: #f8f8f8;
     color: #333;
 }
 
-body#products header {
-    background-color: #13445e;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-}
-
-body#products h1 {
-    font-size: 2.5rem;
-}
 
 body#products h2 {
     color: #13445e;
