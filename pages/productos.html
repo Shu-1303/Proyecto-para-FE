@@ -1,98 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - El Sujeto</title>
     <meta name="description" content="Explora nuestra amplia gama de productos para mascotas, incluyendo alimentos y artículos varios.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body id="products">
-    <header>
-        <h1>Productos - E-Commerce</h1>
-        <p>Bienvenido a nuestra tienda.</p>
-        <p>Aquí puedes encontrar todos nuestros productos.</p>
-    </header>
-    <main class="container">
-        <h2>Alimentos</h2>
-        <div class="product-category">
-            <div class="product-item"><a href="https://ibb.co/Bj6tGrx">
-                <img src="https://i.ibb.co/Bj6tGrx/alimento-balanceado.jpg" alt="alimento-balanceado" loading="lazy">
-                 </a>
-                <h4>Comida seca para perros</h4>
-                <p>Precio: $4500</p>
-                <button>Añadir al carrito</button>
-                <p class="review">⭐⭐⭐⭐⭐ (Reseña)</p>
-            </div>
-            <div class="product-item">
-                <a href="https://ibb.co/QFf05gh">
-                    <img src="https://i.ibb.co/QFf05gh/alimento-humedo.jpg" alt="alimento-humedo" class="product-image" loading="lazy">
-                   </a>
-                <h4>Comida húmeda para gatos</h4>
-                <p>Precio: $1000</p>
-                <button>Añadir al carrito</button>
-                <p class="review">⭐⭐⭐⭐⭐ (Reseña)</p>
-            </div>
-            <div class="product-item">
-                <a href="https://ibb.co/NN0jb4w">
-                    <img src="https://i.ibb.co/NN0jb4w/snacks-saludables.jpg" alt="snacks-saludables" class="product-image" loading="lazy">
-                </a>
-                <h4>Snacks naturales</h4>
-                <p>Precio: $750</p>
-                <button>Añadir al carrito</button>
-                <p class="review">⭐⭐⭐⭐⭐ (Reseña)</p>
-            </div>
-        </div>
 
-        <h2>Artículos Varios</h2>
-        <div class="product-category">
-            <div class="product-item">
-                <a href="https://ibb.co/nkwJ9TH">
-                    <img src="https://i.ibb.co/nkwJ9TH/collares-y-correas.jpg" alt="collares-y-correas" class="product-image" loading="lazy">
-                </a>
-                <h4>Collares y correas</h4>
-                <p>Precio: $7000</p>
-                <button>Añadir al carrito</button>
-                <p class="review">⭐⭐⭐⭐⭐ (Reseña)</p>
-            </div>
-            <div class="product-item">
-                <a href="https://ibb.co/1nCRvsD">
-                    <img src="https://i.ibb.co/1nCRvsD/juguetes-didacticos.jpg" alt="" class="product-image" loading="lazy">
-                </a>
-                <h4>Juguetes interactivos</h4>
-                <p>Precio: $1000</p>
-                <button>Añadir al carrito</button>
-                <p class="review">⭐⭐⭐⭐⭐ (Reseña)</p>
-            </div>
-            <div class="product-item">
-                <a href="https://ibb.co/jWWQ6RL">
-                    <img src="https://i.ibb.co/jWWQ6RL/camas-y-refugioso.png" alt="camas-y-refugioso" class="product-image" loading="lazy"></a>
-                <h4>Camas y refugios</h4>
-                <p>Precio: $10000</p>
-                <button>Añadir al carrito</button>
-                <p class="review">⭐⭐⭐⭐⭐ (Reseña)</p>
+<body id="products">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #13445e;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">El Sujeto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cart" id="cartLink" data-bs-toggle="modal" data-bs-target="#cartModal">Carrito</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div id="payment-methods" class="payment-methods">
-            <p>Medios de pago</p>
-                <img width="48" height="48" src="https://img.icons8.com/color/48/mercado-pago.png" alt="mercado-pago"/>
-                <img width="48" height="48" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard"/>
-                <img width="48" height="48" src="https://img.icons8.com/color/48/visa.png" alt="visa"/> 
+    </nav>
+
+    <header class="text-center text-white py-5" style="background-color: #13445e;">
+        <h1>Productos - E-Commerce</h1>
+    </header>
+
+    <main class="container">
+        <!-- Categoría: Alimentos -->
+        <h2>Alimentos</h2>
+        <div class="row product-category">
+            <!-- Producto 1: Comida seca para perros -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card product-card">
+                    <a href="https://ibb.co/Bj6tGrx">
+                        <img src="https://i.ibb.co/Bj6tGrx/alimento-balanceado.jpg" alt="alimento-balanceado" class="card-img-top" loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">Comida seca para perros</h4>
+                        <p class="card-text">Precio: $4500</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="loadProductDetails('Comida seca para perros', 4500, 'https://i.ibb.co/Bj6tGrx/alimento-balanceado.jpg', 'Comida seca para perros elaborada con ingredientes de alta calidad que ayudan a mantener la salud de tu mascota. Esta comida está pensada para perros de todas las edades, con una fórmula rica en proteínas y nutrientes esenciales para su bienestar.')">Detalles</button>
+                        <p class="review">⭐⭐⭐⭐⭐ (Excelente)</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2: Comida húmeda para gatos -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card product-card">
+                    <a href="https://ibb.co/QFf05gh">
+                        <img src="https://i.ibb.co/QFf05gh/alimento-humedo.jpg" alt="alimento-humedo" class="card-img-top" loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">Comida húmeda para gatos</h4>
+                        <p class="card-text">Precio: $1000</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="loadProductDetails('Comida húmeda para gatos', 1000, 'https://i.ibb.co/QFf05gh/alimento-humedo.jpg', 'Comida húmeda para gatos con nutrientes esenciales, ideal para una dieta balanceada que mejora la digestión y la energía de tu mascota.')">Detalles</button>
+                        <p class="review">⭐⭐⭐⭐⭐ (Buen precio)</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3: Snacks naturales -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card product-card">
+                    <a href="https://ibb.co/NN0jb4w">
+                        <img src="https://i.ibb.co/NN0jb4w/snacks-saludables.jpg" alt="snacks-saludables" class="card-img-top" loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">Snacks naturales</h4>
+                        <p class="card-text">Precio: $750</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="loadProductDetails('Snacks naturales', 750, 'https://i.ibb.co/NN0jb4w/snacks-saludables.jpg', 'Snacks naturales ideales para una merienda saludable para tu mascota, elaborados con ingredientes frescos y orgánicos, sin aditivos ni conservantes artificiales.')">Detalles</button>
+                        <p class="review">⭐⭐⭐⭐⭐ (Excelente)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Categoría: Artículos Varios -->
+        <h2>Artículos Varios</h2>
+        <div class="row product-category">
+            <!-- Producto 4: Collares y correas -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card product-card">
+                    <a href="https://ibb.co/nkwJ9TH">
+                        <img src="https://i.ibb.co/nkwJ9TH/collares-y-correas.jpg" alt="collares-y-correas" class="card-img-top" loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">Collares y correas</h4>
+                        <p class="card-text">Precio: $7000</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="loadProductDetails('Collares y correas', 7000, 'https://i.ibb.co/nkwJ9TH/collares-y-correas.jpg', 'Collares y correas duraderos y de alta calidad para tu mascota, fabricados con materiales resistentes que garantizan comodidad y seguridad para tu amigo peludo.')">Detalles</button>
+                        <p class="review">⭐⭐⭐⭐⭐ (Recomiendo)</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 5: Juguetes interactivos -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card product-card">
+                    <a href="https://ibb.co/1nCRvsD">
+                        <img src="https://i.ibb.co/1nCRvsD/juguetes-didacticos.jpg" alt="juguetes-didacticos" class="card-img-top" loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">Juguetes interactivos</h4>
+                        <p class="card-text">Precio: $1000</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="loadProductDetails('Juguetes interactivos', 1000, 'https://i.ibb.co/1nCRvsD/juguetes-didacticos.jpg', 'Juguetes interactivos que estimulan la mente de tu mascota y ayudan a mejorar su desarrollo cognitivo. Perfectos para mantener ocupada a tu mascota mientras juega.')">Detalles</button>
+                        <p class="review">⭐⭐⭐⭐⭐ (Muy bueno)</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 6: Camas y refugios -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card product-card">
+                    <a href="https://ibb.co/jWWQ6RL">
+                        <img src="https://i.ibb.co/jWWQ6RL/camas-y-refugioso.png" alt="camas-y-refugioso" class="card-img-top" loading="lazy">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">Camas y refugios</h4>
+                        <p class="card-text">Precio: $3500</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" onclick="loadProductDetails('Camas y refugios', 3500, 'https://i.ibb.co/jWWQ6RL/camas-y-refugioso.png', 'Camas y refugios cómodos y seguros para tu mascota, disponibles en diferentes tamaños y materiales, diseñados para asegurar un descanso reparador.')">Detalles</button>
+                        <p class="review">⭐⭐⭐⭐⭐ (Recomiendo)</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
-        <a href="../index.html">Inicio</a>
+
+    <!-- Modal de Detalles del Producto -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalProductImage" class="img-fluid" src="" alt="Imagen del producto">
+                    <h4 id="modalProductTitle"></h4>
+                    <p id="modalProductPrice"></p>
+                    <p id="modalProductDescription"></p> <!-- Descripción ampliada -->
+                    
+                    <!-- Contador de Cantidad -->
+                    <div id="modalProductQuantity" class="d-flex align-items-center">
+                        <button class="btn btn-sm btn-danger" onclick="updateModalQuantity(-1)">-</button>
+                        <span id="modalQuantity" class="mx-2">1</span>
+                        <button class="btn btn-sm btn-success" onclick="updateModalQuantity(1)">+</button>
+                    </div>
+
+                    <div id="productAddedMessage"></div>
+                    <button class="btn btn-primary" onclick="addToCart()">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal del Carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems"></div>
+                    <p><strong>Total: $<span id="cartTotal">0</span></strong></p>
+                    <button class="btn btn-success" onclick="checkout()">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <a href="../index.html" class="text-white">Inicio</a>
         <p>&copy; 2024 El Sujeto</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/route.js" defer></script> 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-

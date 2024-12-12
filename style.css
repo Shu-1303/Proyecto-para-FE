@@ -15,7 +15,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
 /* Header */
 header {
     background-image: radial-gradient(circle, #13445e, #00718b, #009f91, #00ca6c, #a8eb12);
@@ -24,20 +23,58 @@ header {
     color: #fff;
     padding: 1rem;
     text-align: center;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+    position: relative; 
 }
-.header-content {
-    background-color: white;
-    padding: 1rem;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+
+header h1 {
+    position: absolute;  
+    left: 50%;
+    transform: translateX(-50%);  
+    margin: 0;  
+    z-index: 1; 
 }
-.header-image {
-    max-width: 100%;
+
+/* Botón de "Inicio" a la derecha */
+header .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;  
+    width: 100%;  
+}
+
+header .nav li {
+    margin: 0;
+}
+
+header .nav-link {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #00ca6c;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header .nav-link:hover {
+    background-color: #00718b;
+    transform: scale(1.1);
+}
+ 
+.Imagen {
+    display: block;   
+    margin: 20px auto 10px;
+    max-width: 100%;  
     height: auto;
-    margin: 1rem 0;
-    border: 2px solid #afeec2;
+    border: 2px solid #afeec2; 
 }
+
 
 /* Barra de navegación */
 nav ul {
@@ -63,7 +100,7 @@ nav ul li a {
 }
 nav ul li a:hover {
     transform: scale(1.1);
-    background-color: rgba(255, 255, 255, 0.3);
+    /*background-color: rgba(255, 255, 255, 0.3);*/
     border-color: #FFD700;
 }
 nav ul li a.active {
@@ -82,19 +119,6 @@ main {
     margin: 0 auto;
     max-width: 1200px;
     flex: 1;
-}
-footer {
-    text-align: center;
-    color: white;
-    padding: 1rem;
-    background-image: linear-gradient(to top, #13445e, #00718b, #009f91, #00ca6c, #a8eb12);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-footer a {
-    color: #ffffffd8;
-    text-decoration: none;
 }
 
 
@@ -138,7 +162,6 @@ header .header-content nav a:hover {
 }
 
 /* Media Queries */
-
 
 @media (max-width: 768px) {
 
@@ -279,7 +302,96 @@ header .header-content nav a:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* Productos */
+footer {
+    background-image: linear-gradient(to top, #13445e, #00718b, #009f91, #00ca6c, #a8eb12); 
+    color: white;
+    padding: 20px 10px; 
+    width: 100%; 
+    position: relative;
+    bottom: 0;
+    box-sizing: border-box; 
+    margin-top: 30px; 
+    min-height: 100px; 
+  }
+  
+  footer p, footer a {
+    color: white; 
+    text-decoration: none; 
+  }
+  
+  footer a:hover {
+    color: white; 
+  }
+  
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+  }
+  
+  footer .left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    flex-grow: 1; 
+  }
+  
+  footer .inicio-link {
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    margin-bottom: 5px; 
+  }
+  
+  footer .left-column p {
+    margin-top: 5px; 
+  }
+  
+  footer .right-column {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    gap: 10px; 
+  }
+  
+  footer .nav {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+  }
+  
+  footer .whatsapp img, footer .instagram img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  footer .nav li {
+    display: flex;
+    align-items: center; 
+  }
+  
+  /* Media Query */
+  @media (max-width: 768px) {
+    footer .footer-content {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    footer .right-column {
+      margin-top: 10px; 
+      justify-content: center; 
+    }
+  
+    footer .nav {
+      flex-direction: column; /* Iconos en columna */
+      align-items: center; 
+    }
+  }
+  
+  
+/* Productos 
 body#products {
     background-color: #f8f8f8;
     color: #333;
@@ -346,7 +458,7 @@ body#products .product-item p {
     color: #555;
 }
 
-/* Botón de acción */
+/* Botón de acción 
 body#products .product-item button {
     background-color: #65cb49;
     color: white;
@@ -362,16 +474,16 @@ body#products .product-item button:hover {
     background-color: #00718b;
 }
 
-/* Reseñas de productos */
+/* Reseñas de productos 
 body#products .review {
     font-style: italic;
     font-size: 0.9rem;
     color: #888;
     margin-top: 5px;
-    word-wrap: break-word; /* Asegura que las reseñas no se desborden */
+    word-wrap: break-word; /* Asegura que las reseñas no se desborden 
 }
 
-/* Métodos de pago */
+/* Métodos de pago 
 body#products #payment-methods {
     margin-top: 30px;
     text-align: center;
@@ -382,7 +494,7 @@ body#products #payment-methods img {
     max-width: 48px;
 }
 
-/* Footerproductos */
+/* Footerproductos 
 body#products footer {
     background-color: #13445e;
     padding: 1rem;
@@ -390,22 +502,22 @@ body#products footer {
     text-align: center;
 }
 
-/* Media Queries */
+/* Media Queries 
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 768px) {
 
     body#products .product-item {
-        width: 45%;  /* Aumenta el ancho de los productos en pantallas más pequeñas */
+        width: 45%;  
     }
 
     body#products .product-category {
-        justify-content: space-between; /* Ajusta la distribución de los productos */
+        justify-content: space-between; 
     }
 
 }
 
-/* Para pantallas más pequeñas (menos de 600px) */
+ Para pantallas más pequeñas (menos de 600px) 
 @media (max-width: 600px) {
 
     body#products .product-item {
@@ -424,24 +536,129 @@ body#products footer {
     body#products .review {
         font-size: 1rem;  
     }
+}*/
+
+/* Productos */
+body#products {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+body#products header {
+    background-color: #13445e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+body#products h1 {
+    font-size: 2.5rem;
+}
+
+body#products h2 {
+    color: #13445e;
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-image {
+    transition: transform 0.2s ease-in-out;  
+    width: 50%;  
+    height: auto; 
+}
+
+.product-item {
+    overflow: hidden;  
+}
+
+.product-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+/* Método de pago */
+body#products #payment-methods {
+    margin-top: 30px;
+    text-align: center;
+}
+
+body#products #payment-methods img {
+    margin: 0 10px;
+    max-width: 48px;
+}
+
+/* Footer */
+body#products footer {
+    background-color: #13445e;
+    padding: 1rem;
+    color: white;
+    text-align: center;
 }
 
 
 /* Sobre Nosotros */
-#about-us {
-    background-color: #f4f4f4;
-    padding: 40px 0;
-    min-height: 100vh;
-}
-header {
-    background-image: radial-gradient(circle, #13445e, #00718b, #009f91, #00ca6c, #a8eb12);
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+/* Estilo del Header */
+#about-us-page header {
+    background-color: #007bff; 
+    color: white; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1000;
 }
+
+/* Nav de la cabecera */
+#about-us-page .nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 100%; 
+    justify-content: flex-end; 
+}
+
+#about-us-page .nav-item {
+    margin: 0 10px;
+}
+
+#about-us-page .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #00ca6c; 
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#about-us-page .nav-link:hover {
+    background-color: #00718b; 
+    text-decoration: underline;
+}
+
+#about-us-page header a {
+    text-decoration: none !important; 
+}
+
+/* Estilo para el título h2 principal */
+#about-us-page h2 {
+    font-size: 2.5rem; 
+    color: #333; 
+    text-transform: uppercase; 
+    margin-top: 80px; 
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Estilos para el texto principal */
 #about-text {
     text-align: center;
     font-size: 1.2rem;
@@ -451,7 +668,9 @@ header {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 15px;
 }
+
 #about-img {
     display: block;
     margin-left: auto;
@@ -460,28 +679,38 @@ header {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 60%;
+    max-width: 350px; 
 }
+
 #about-img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
+
+/* imagen de fondo */
+body {
+    background-image: url('https://i.ibb.co/Br26xpW/fondito.webp'); 
+    background-size: cover;  
+    background-position: center center;  
+    background-repeat: no-repeat;  
+    margin: 0;  
+    padding: 0;  
+}
+
 footer {
-    background-color: #13445e;
+    background-color: #00718b;
     color: white;
     padding: 20px;
-    font-size: 0.9rem;
     text-align: center;
-    border-top: 2px solid #dcdcdc;
-    margin-top: 30px;
 }
+
 footer a {
-    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
-footer a:hover {
-    color: #f8f8f7;
-}
+
+
 .header-icon {
     width: 30px;
     height: auto;
@@ -506,7 +735,7 @@ footer a:hover {
     object-fit: contain;
 }
 
-/* Responsividad para móviles */
+/* Responsividad para celus */
 @media (max-width: 600px) {
     .payment-methods {
         justify-content: center;
@@ -517,6 +746,24 @@ footer a:hover {
 }
 
 /* Comunidad */
+
+#comunidad-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+    height: 100px;
+}
+
+#comunidad-header h2 {
+    margin: 0;
+    font-size: 2rem;
+    padding: 20px 0;
+    text-align: center !important;
+}
+
+
 #publicacion form {
     display: flex;
     flex-direction: column;
@@ -565,7 +812,7 @@ footer a:hover {
     }
 }
 
-/* Contacto */
+/* Contacto 
 #contact {
     padding: 20px;
 }
@@ -595,7 +842,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsividad */
+/* Responsividad 
 @media (max-width: 600px) {
     #contact {
         padding: 10px;
