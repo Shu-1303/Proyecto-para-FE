@@ -35,11 +35,15 @@ Se realizan algunas mínimas modificaciones en el css luego de haber observado e
 **Autor** Sabrina Emmanuelli
 **Contenido** Mi proyecto para FEJS (aprendizaje)
 **Version**0.1.1
+
 Estilos Generales
 Se fusionan estilos con bootstrap.  Se mantienen las Media Queries por consigna.
+
 Javascript
-Carga dinámica de contenido con detalle de productos para la creación de un carrito de compras.  Manioulación del DOM, session storage y local storage.  Se añaden API's con fetch y Json para brindarle realismo. Asimismo, se utiliza la API placeholder para cargar una agenda interna.
+Carga dinámica de contenido con detalle de productos para la creación de un carrito de compras.  Manipulación del DOM, session storage y local storage.  Se añaden API's con fetch y Json para brindarle realismo. Asimismo, se utiliza la API placeholder para cargar una agenda interna.
+
 Interactividad
 Se añaden funcionalidades a las ya creadas en la versión anterior.
+
 Navegación
 Se mantiene la función loadPage. asimismo, se eliminan las páginas de inicio para agilizar la navegaci♀n, y la de contacto, preservando el contenido mediante traslado al Index.
