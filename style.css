@@ -385,191 +385,47 @@ footer {
     }
   
     footer .nav {
-      flex-direction: column; /* Iconos en columna */
+      flex-direction: column; 
       align-items: center; 
     }
   }
   
-  
-/* Productos 
-body#products {
-    background-color: #f8f8f8;
-    color: #333;
-}
-
-body#products header {
-    background-color: #13445e;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-}
-
-body#products h1 {
-    font-size: 2.5rem;
-}
-
-body#products h2 {
-    color: #13445e;
-    margin-top: 20px;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-}
-
-body#products .product-category {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-body#products .product-item {
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 20px;
-    padding: 15px;
-    width: 30%;  
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-body#products .product-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-body#products .product-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-body#products .product-item h4 {
-    font-size: 1.2rem;
-    color: #13445e;
-    margin-bottom: 10px;
-}
-
-body#products .product-item p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Botón de acción 
-body#products .product-item button {
-    background-color: #65cb49;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-body#products .product-item button:hover {
-    background-color: #00718b;
-}
-
-/* Reseñas de productos 
-body#products .review {
-    font-style: italic;
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 5px;
-    word-wrap: break-word;  
-}
-
-/* Métodos de pago 
-body#products #payment-methods {
-    margin-top: 30px;
-    text-align: center;
-}
-
-body#products #payment-methods img {
-    margin: 0 10px;
-    max-width: 48px;
-}
-
-/* Footerproductos 
-body#products footer {
-    background-color: #13445e;
-    padding: 1rem;
-    color: white;
-    text-align: center;
-}
-
-/* Media Queries 
-
-
-@media (max-width: 768px) {
-
-    body#products .product-item {
-        width: 45%;  
-    }
-
-    body#products .product-category {
-        justify-content: space-between; 
-    }
-
-}
-
- Para pantallas más pequeñas (menos de 600px) 
-@media (max-width: 600px) {
-
-    body#products .product-item {
-        width: 100%;  
-    }
-
-    body#products .product-category {
-        flex-direction: column;  
-        justify-content: center;
-    }
-
-    body#products .product-item img {
-        max-width: 100%;  
-    }
-
-    body#products .review {
-        font-size: 1rem;  
-    }
-}*/
 
 #products-header {
     background-color: #13445e;
-    padding:  2.5rem 0 5rem 5;  
-    text-align: center;
-    justify-content: center;
     display: flex;
+    justify-content: center; 
     align-items: center; 
+    padding: 3rem 0; 
+    min-height: 100px; 
+    text-align: center;
 }
 
 #products-header h1 {
     font-size: 2.5rem;  
-    word-wrap: break-word;  
-    margin: 0;  
+    margin: 0;          
+    word-wrap: break-word;
 }
 
-
 @media (max-width: 768px) {
-    #products-header h1 {
-        font-size: 1.5rem;  
+    #products-header {
+        padding: 2rem 0;  
     }
 
-    #products-header {
-        padding: 1.5rem 0;  
+    #products-header h1 {
+        font-size: 2rem;   
     }
 }
 
 @media (max-width: 576px) {
+    #products-header {
+        padding: 1.5rem 0;  
+    }
+
     #products-header h1 {
         font-size: 1.5rem;  
     }
 }
-
 
 .container {
     max-width: 100%;  
